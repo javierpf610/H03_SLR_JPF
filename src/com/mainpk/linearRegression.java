@@ -29,11 +29,13 @@ public class linearRegression {
     public double Beta1(){
         return (dataSet.length * sumxy - sumx *  sumy)/(dataSet.length * sumxsq - (sumx * sumx));
     }
+    public double yhat(){return Beta0()+Beta1()*x;}
 
-    public void print(){
+    public void printRegressionEquation(){
         System.out.println("Y"+(char) 94+"="+Beta0()+"+"+Beta1()+"("+x+")");
     }
-    public double yhat(){
-        return Beta0()+Beta1()*x;
+    public void printYHat(){
+        System.out.println("Y"+(char) 94+"="+yhat());
     }
+
 }
